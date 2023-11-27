@@ -8,6 +8,7 @@ services:
     volumes:
       - "nexus:/nexus-data"
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.nexus.rule=Host(`nexus.cloudcrafts.club`)"
       - "traefik.http.routers.nexus.tls=true"
       - "traefik.http.routers.nexus.tls.certresolver=cloudflare"
