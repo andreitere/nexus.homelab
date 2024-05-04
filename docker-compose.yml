@@ -5,6 +5,9 @@ services:
     container_name: nexus
     networks:
       public_bridge:
+    ports:
+      - "8081:8081"
+      - "5000:5000"
     volumes:
       - "nexus:/nexus-data"
     labels:
